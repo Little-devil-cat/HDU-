@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+<meta charset="utf-8">
+<title>Unite3D同好者</title>
+<script src="js/passwordRules.js"></script> 
+<script src="js/jquerymin.js"></script>
+<script src="js/jquery-1.11.0.min.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/passwordRules.css">
+<link rel="stylesheet" href="css/passwordRulesHelper.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="content">
+        <div class="form sign-in">
+            <h2>欢迎来到管家婆账户管理网站</h2>
+            <form>
+			<label>
+                <span>邮箱</span>
+                <input id="USername" type="email" />
+            </label>
+            <label>
+                <span>密码</span>
+                <input id="Password1" type="password" />
+            </label>
+			</form>
+            <p class="forgot-pass"><a href="javascript:">忘记密码？</a></p>
+            <button type="button" class="submit" id="lendup1" onclick="checkCookie()">登 录</button>
+        </div>
+        <div class="sub-cont">
+            <div class="img">
+				
+                <div class="img__text m--up">
+                    <h2>还未注册？</h2>
+                    <p>立即注册，</p>
+                </div>
+                <div class="img__text m--in">
+                    <h2>已有帐号？</h2>
+                    <p class="sb">有帐号就登录！</p>
+                </div>
+				
+                <div class="img__btn">
+                    <span class="m--up">注 册</span>
+                    <span class="m--in">登 录</span>
+                </div>
+            </div>
+            <div class="form sign-up">
+                <h2>立即注册</h2>
+                <form>
+				<label>
+                    <span>用户名</span>
+                    <input type="text" />
+                </label>
+                <label>
+                    <span>邮箱</span>
+                    <input type="email" />
+                </label>
+                <label>
+                    <span>密码</span>
+                    <input type='password' name='passwordField' id='passwordField' class='form-control' autocomplete='new-password' required='required' />
+                </label>
+				</form>
+                <button type="button" class="submit">注 册</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+	<script src="js/passwordRules.js"></script>
+	
+	<div style="text-align:center;">
+		<script>window.jQuery || document.write('<script src="js/jquerymin.js"><\/script>')</script>
+    <script type="text/javascript">
+		$(function() {
+		    $('#passwordField').passwordRulesValidator({
+		    	'msgRules':'你填写的密码必须符合下面的规则：',
+		    	'rules' : {
+			    'length' : {
+			        'regex': '.{8,}',
+			        'name': 'length',
+			        'message': '密码必须大于八个字符',
+			        'enable': true
+			    },
+			    'lowercase' :{
+			        'regex': '[a-z]{1,}',
+			        'name': 'lowercase',
+			        'message': '至少需要一个小写字母',
+			        'enable': true
+			    },
+			    'uppercase' : {
+			        'regex': '[A-Z]{1,}',
+			        'name': 'uppercase',
+			        'message': '至少需要一个大写字母',
+			        'enable': true
+			    },
+			    'number' : {
+			        'regex': '[0-9]{1,}',
+			        'name': 'number',
+			        'message': '至少需要一个安全数字',
+			        'enable': true
+			    },
+			    'specialChar' : {
+			        'regex': '[^a-zA-Z0-9]{1,}',
+			        'name': 'special-char',
+			        'message': '至少需要一个特殊字符',
+			        'enable': true
+			    }
+			}
+		    });
+		});
+	</script>
+</body>
+
+</html>
