@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="bootstrap-3.4.1-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/data.css">
+		<title>管家婆系统</title>
+	</head>
+	<body>
+		<nav class="navbar" role="navigation" id="mainnav">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">账单系统</a>
+				</div>
+				<div class="choise">
+					<div id="lendup">
+						<ul id="lendup1">
+							<li><a data-toggle="modal" data-target="#register">注册</a></li>
+							<li><a data-toggle="modal" data-target="#signin">登录</a></li>
+						</ul>
+					</div>
+					<ul class="list-inline">
+						<li id="C0"><a href="#/revise" title="修改">修改数据</a></li>
+						<li id="C1"><a href="#/statistics" title="统计">统计分析</a></li>
+						<!--  <li>Item 3</li>
+			  		<li>Item 4</li>-->
+					</ul>
+
+				</div>
+
+			</div>
+		</nav>
+		<div class="Mainpage">
+			<div id="midmainpage0" class="content">
+				<div id="revise"></div>
+				<script>
+					$.get("./tql/data.html", function(result) {
+						$("#revise").html(result);
+					});
+				</script>
+			</div>
+			<div id="midmainpage1" class="content">
+				<div id="statistics"></div>
+				<script>
+					$.get("./tql/txt2.html", function(result) {
+						$("#statistics").html(result);
+					});
+				</script>
+			</div>
+		</div>
+		<script src="js/hash.js"></script>
+	</body>
+</html>

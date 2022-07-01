@@ -1,0 +1,86 @@
+#box1 {
+        height:100%;
+        background-color: white;
+    }
+
+    #cen {
+        text-align: center;
+    }
+
+    table{
+        margin: 0 auto;
+        text-align: center;
+        min-height: 25px;
+        line-height: 25px;
+        border-collapse: collapse;
+    }
+    th{
+        width: 300px;
+        height: 30px;
+        border: solid 2px LightGrey;
+    }
+    td{
+        width: 300px;
+        height: 30px;
+        border: solid 2px LightGrey;
+    }
+
+    #year {
+        width: 100px;
+        height: 30px;
+        border: solid 2px LightGrey;
+    }
+    #month {
+        width: 100px;
+        height: 30px;
+        border: solid 2px LightGrey;
+    }
+
+    #day {
+        width: 100px;
+        height: 30px;
+        border: solid 2px LightGrey;
+    }
+
+    #find {
+        width: 80px;
+        height: 30px;
+        background-color: #87CEFA;
+        border: 0px;
+        box-shadow:-5px 0 5px #87CEFA
+    }
+    #add {
+        width: 80px;
+        height: 30px;
+        background-color: #FFDAB9;
+        border: 0px;
+        box-shadow:-5px 0 5px #FFDAB9
+    }
+    #del {
+        width: 80px;
+        height: 30px;
+        background-color: #90EE90;
+        border: 0px;
+        box-shadow:-5px 0 5px #90EE90
+    }
+
+    select {
+        width: 120px;
+        height: 30px;
+    }
+
+    #user1 {
+        width: 120px;
+        height: 24px;
+    }
+
+    #money1 {
+        width: 120px;
+        height: 24px;
+    }
+
+    #check {
+        width: 100px;
+        height: 30px;
+        border: solid 2px LightGrey;
+    }
