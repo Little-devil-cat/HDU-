@@ -1,0 +1,23 @@
+{
+  "name": "hdu-housekeeper",
+  "version": "1.0.0",
+  "description": "HDU短学期管家婆系统",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Little-devil-cat/HDU-housekeeper.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Little-devil-cat/HDU-housekeeper/issues"
+  },
+  "homepage": "https://github.com/Little-devil-cat/HDU-housekeeper#readme",
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}

@@ -1,290 +1,312 @@
 <div id="box1">
 	<div id="cen">
+		用户1
+		<input type="text" name="user1" id="user1" value="" placeholder="USER1">
+		&ensp;&ensp;&ensp;&ensp;
 		收入/支出
 		<select id="select1" onchange="Change_select();">
-			<option value=""></option>
+			<option value="" selected="selected">请选择</option>
 			<option value="收入">收入</option>
 			<option value="支出">支出</option>
 		</select>
 		&ensp;&ensp;&ensp;&ensp;
 
-		金额
-		<input type="number" name="money1" id="money1">
+		用户2
+		<input type="text" name="user2" id="user2" value="" placeholder="USER2">
 		&ensp;&ensp;&ensp;&ensp;
-
-		用户
-		<input type="text" name="user1" id="user1">
+		
+		金额
+		<input type="number" name="money1" id="money1" value="" placeholder="MONEY">
 		&ensp;&ensp;&ensp;&ensp;
 
 		时间
-		<select id="select2">
-			<option>2022</option>
+		<select id="select2">、
+			<option value="" selected="selected">请选择</option>
+			<option value="2022">2022</option>
 		</select>
 		<select id="select3">
-			<option>1</option>
-			<option>2</option>
-			<option>3</option>
-			<option>4</option>
-			<option>5</option>
-			<option>6</option>
-			<option>7</option>
-			<option>8</option>
-			<option>9</option>
-			<option>10</option>
-			<option>11</option>
-			<option>12</option>
+			<option value="" selected="selected">请选择</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
 		</select>
 		<select id="select4">
-			<option>1</option>
-			<option>2</option>
-			<option>3</option>
-			<option>4</option>
-			<option>5</option>
-			<option>6</option>
-			<option>7</option>
-			<option>8</option>
-			<option>9</option>
-			<option>10</option>
-			<option>11</option>
-			<option>12</option>
-			<option>13</option>
-			<option>14</option>
-			<option>15</option>
-			<option>16</option>
-			<option>17</option>
-			<option>18</option>
-			<option>19</option>
-			<option>20</option>
-			<option>21</option>
-			<option>22</option>
-			<option>23</option>
-			<option>24</option>
-			<option>25</option>
-			<option>26</option>
-			<option>27</option>
-			<option>28</option>
-			<option>29</option>
-			<option>30</option>
-			<option>31</option>
+			<option value="" selected="selected">请选择</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			<option value="24">24</option>
+			<option value="25">25</option>
+			<option value="26">26</option>
+			<option value="27">27</option>
+			<option value="28">28</option>
+			<option value="29">29</option>
+			<option value="30">30</option>
+			<option value="31">31</option>
 		</select>
 		&ensp;&ensp;&ensp;&ensp;
 
 		收支种类
 		<select id="select5"></select>
-		<script>
-			var first_keywords = {};
-            //定义收入支出对应的下拉框
-            first_keywords['收入'] = ['工资', '奖金', '其他收入'];
-            first_keywords['支出'] = ['食物', '衣物', '游玩', '游戏', '家具', '日常用品', '其他支出'];
-            function Change_select() {
-            //根据id找到两个下拉框对象
-                var target1 = document.getElementById("select1");
-                var target2 = document.getElementById("select5");
-                //得到第一个下拉框的内容
-                var selected_select1 = target1.options[target1.selectedIndex].value;
-                //清空第二个下拉框
-                while (target2.options.length) {
-                    target2.remove(0);
-                }
-                //根据第一个下拉框的内容找到对应的列表
-                var select1_list = first_keywords[selected_select1];
-                if (select1_list) {
-                    for (var i = 0; i < select1_list.length; i++) {
-                        var item = new Option(select1_list[i], i);
-                        //将列表中的内容加入到第二个下拉框
-                        target2.options.add(item);
-                    }
-                }
-            } 
-            </script>
+		<option value="1"></option>
 		&ensp;&ensp;&ensp;&ensp;
 		<br /><br />
 
 		<input type="button" name="add" id="add" value="添加" />
 		&ensp;&ensp;&ensp;
+
 		<input type="button" name="find" id="find" value="查询" />
 		&ensp;&ensp;&ensp;
+
 		<input type="button" name="find" id="del" value="删除" />
 		<br /><br />
 
 		<div id="content"></div>
-		<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
 		<script type="text/javascript">
 			var jsonData = [{
+					id:1,
+					name1: "小华",
 					inout: "收入",
 					money: 300,
-					name: "小明",
+					name2: "小明",
 					year: 2022,
 					month: 3,
 					day: 27,
 					type: "工资"
 				},
 				{
+					id:2,
+					name2: "小华",
 					inout: "支出",
 					money: 60,
-					name: "小红",
+					name1: "小红",
 					year: 2022,
 					month: 3,
 					day: 27,
 					type: "衣物"
 				},
 				{
+					id:3,
+					name2: "小华",
 					inout: "支出",
 					money: 20,
-					name: "小红",
+					name1: "小红",
 					year: 2022,
 					month: 3,
 					day: 27,
 					type: "食物"
 				},
 				{
+					id:4,
+					name2: "小华",
 					inout: "收入",
 					money: 300,
-					name: "小红",
+					name1: "小红",
 					year: 2022,
 					month: 3,
 					day: 27,
 					type: "工资"
 				},
 				{
+					id:5,
+					name2: "小华",
 					inout: "支出",
 					money: 20,
-					name: "小红",
+					name1: "小红",
 					year: 2022,
 					month: 3,
 					day: 27,
 					type: "日常用品"
 				},
 				{
+					id:6,
+					name2: "小华",
 					inout: "收入",
 					money: 300,
-					name: "小明",
+					name1: "小明",
 					year: 2022,
 					month: 3,
 					day: 28,
 					type: "工资"
 				},
 				{
+					id:7,
+					name2: "小华",
 					inout: "支出",
 					money: 60,
-					name: "小红",
+					name1: "小红",
 					year: 2022,
 					month: 3,
 					day: 28,
 					type: "衣物"
 				},
 				{
+					id:8,
+					name2: "小华",
 					inout: "支出",
 					money: 20,
-					name: "小红",
+					name1: "小红",
 					year: 2022,
 					month: 3,
 					day: 28,
 					type: "食物"
 				},
 				{
+					id:9,
+					name2: "小华",
 					inout: "收入",
 					money: 300,
-					name: "小红",
+					name1: "小红",
 					year: 2022,
 					month: 3,
 					day: 27,
 					type: "工资"
 				},
 				{
+					id:10,
+					name2: "小华",
 					inout: "支出",
 					money: 20,
-					name: "小明",
+					name1: "小明",
 					year: 2022,
 					month: 3,
 					day: 27,
 					type: "其他支出"
 				},
 				{
+					id:11,
+					name2: "小华",
 					inout: "收入",
 					money: 300,
-					name: "小明",
+					name1: "小明",
 					year: 2022,
 					month: 3,
 					day: 29,
 					type: "工资"
 				},
 				{
+					id:12,
+					name2: "小华",
 					inout: "收入",
 					money: 60,
-					name: "小红",
+					name1: "小红",
 					year: 2022,
 					month: 3,
 					day: 29,
 					type: "其他收入"
 				},
 				{
+					id:13,
+					name2: "小华",
 					inout: "支出",
 					money: 20,
-					name: "小红",
+					name1: "小红",
 					year: 2022,
 					month: 3,
 					day: 29,
 					type: "食物"
 				},
 				{
+					id:14,
+					name2: "小华",
 					inout: "收入",
 					money: 300,
-					name: "小红",
+					name1: "小红",
 					year: 2022,
 					month: 3,
 					day: 29,
 					type: "工资"
 				},
 				{
+					id:15,
+					name2: "小华",
 					inout: "支出",
 					money: 20,
-					name: "小红",
+					name1: "小红",
 					year: 2022,
 					month: 3,
 					day: 29,
 					type: "日常用品"
 				},
 				{
+					id:16,
+					name2: "小华",
 					inout: "收入",
 					money: 300,
-					name: "小明",
+					name1: "小明",
 					year: 2022,
 					month: 3,
 					day: 26,
 					type: "工资"
 				},
 				{
+					id:17,
+					name2: "小华",
 					inout: "支出",
 					money: 60,
-					name: "小华",
+					name1: "小华",
 					year: 2022,
 					month: 3,
 					day: 27,
 					type: "游戏"
 				},
 				{
+					id:18,
+					name2: "小华",
 					inout: "支出",
 					money: 20,
-					name: "小红",
+					name1: "小红",
 					year: 2022,
 					month: 3,
 					day: 27,
 					type: "食物"
 				},
 				{
+					id:19,
+					name2: "小华",
 					inout: "收入",
 					money: 300,
-					name: "小红",
+					name1: "小红",
 					year: 2022,
 					month: 3,
 					day: 27,
 					type: "工资"
 				},
 				{
+					id:20,
+					name2: "小华",
 					inout: "支出",
 					money: 20,
-					name: "小明",
+					name1: "小明",
 					year: 2022,
 					month: 3,
 					day: 27,
@@ -296,9 +318,11 @@
 			function initTable() {
 				var html = '<table  cellspacing="0" >';
 				html += '<tr>';
+				html += '<th id="ID">id</th>'
+				html += '<th>用户1</th>'
 				html += '<th>收入/支出</th>';
+				html += '<th>用户2</th>';
 				html += '<th>金额</th>';
-				html += '<th>用户</th>';
 				html += '<th id="year">年</th>';
 				html += '<th id="month">月</th>';
 				html += '<th id="day">日</th>';
@@ -308,9 +332,11 @@
 				for (var j in jsonData) {
 					var obj = jsonData[j];
 					html += '<tr>'
+					html += '<td id="ID">' + obj.id + '</td>';
+					html += '<td>' + obj.name1 + '</td>';
 					html += '<td>' + obj.inout + '</td>';
+					html += '<td>' + obj.name2 + '</td>';
 					html += '<td>' + obj.money + '</td>';
-					html += '<td>' + obj.name + '</td>';
 					html += '<td id="year">' + obj.year + '</td>';
 					html += '<td id="month">' + obj.month + '</td>';
 					html += '<td id="day">' + obj.day + '</td>';
