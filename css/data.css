@@ -41,6 +41,12 @@
         height: 30px;
         border: solid 2px LightGrey;
     }
+	
+	#ID {
+	    width: 100px;
+	    height: 30px;
+	    border: solid 2px LightGrey;
+	}
 
     #find {
         width: 80px;
@@ -71,12 +77,16 @@
 
     #user1 {
         width: 120px;
-        height: 24px;
+        height: 30px;
     }
+	#user2 {
+	    width: 120px;
+	    height: 30px;
+	}
 
     #money1 {
         width: 120px;
-        height: 24px;
+        height: 30px;
     }
 
     #check {
