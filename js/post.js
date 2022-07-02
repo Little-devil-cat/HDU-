@@ -1,4 +1,4 @@
-
+$(document).ready(function(){
 const add1 = document.getElementById('add');
 add1.addEventListener('click',e => {
     axios({
@@ -21,3 +21,4 @@ add1.addEventListener('click',e => {
         console.log('错误', error.message)
     })
 })
+});
