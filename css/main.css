@@ -1,4 +1,4 @@
-.choise{
+.choise {
 	height: 48px;
 	width: auto;
 	margin: 0px 12px 0 12px;
@@ -10,8 +10,8 @@
 
 
 
-.choise ul li a{
-	
+.choise ul li a {
+
 	display: block;
 	padding: 13px 50px;
 	background: #3A4953;
@@ -19,13 +19,15 @@
 	text-decoration: none;
 	border-right: 1px solid #000;
 }
-.choise ul li a:hover{
+
+.choise ul li a:hover {
 	background: #146C9C;
-		/* 变换背景色 */
-		color: #fff;
-		/* 变换文字颜色 */
-	}
-.container{
+	/* 变换背景色 */
+	color: #fff;
+	/* 变换文字颜色 */
+}
+
+.container {
 	position: relative;
 	height: auto;
 	width: 1100px;
@@ -35,13 +37,14 @@
 	background-color: rgba(0, 0, 0, 0.3);
 	margin: auto;
 }
+
 #lendup {
 	position: absolute;
 	left: 900px;
 	top: -87px;
 	display: block;
 	padding: 13px 10px;
-	
+
 	height: 48px;
 	width: auto;
 	margin: 86px 12px 0 20px;
@@ -70,6 +73,7 @@
 	border-radius: 12px;
 	border: 3px solid darkblue;
 }
+
 #lendup1 li a:hover {
 	background: orangered;
 	/* 变换背景色 */
@@ -77,7 +81,7 @@
 	/* 变换文字颜色 */
 }
 
-.navbar-header a{
+.navbar-header a {
 	display: block;
 	padding: 13px 50px;
 	background: #0000ff;
@@ -86,64 +90,76 @@
 	border-right: 1px solid #000;
 }
 
-.navbar-header a:hover{
+.navbar-header a:hover {
 	background: #146C9C;
-		/* 变换背景色 */
-		color: #fff;
-		/* 变换文字颜色 */
-	}
-
-#mainnav {min-height: 50px;}
-
-.Mainpage{
-	position: relative;
-	top:30px;
+	/* 变换背景色 */
+	color: #fff;
+	/* 变换文字颜色 */
 }
 
-.fangkuang{
+#mainnav {
+	min-height: 50px;
+}
+
+.Mainpage {
+	position: relative;
+	top: 30px;
+}
+
+.fangkuang {
 	position: relative;
 	left: 20px;
 	height: auto;
-	width: 100% ;
-	
+	width: 100%;
+
 	border: 2px solid darkblue;
 }
 
-.inputplace{
+.inputplace {
+	position: relative;
+	left: 20px;
+	height: auto;
+	width: 500px;
+}
+
+.formtitle {
+	font-size: 1.4em;
+}
+
+#time1 {
+	-web-kit-appearance: none;
+	-moz-appearance: none;
+	font-size: 1.4em;
+	height: 35px;
+	border-radius: 4px;
+	border: 1px solid #c8cccf;
+	color: #6a6f77;
+}
+
+#time2 {
+	-web-kit-appearance: none;
+	-moz-appearance: none;
+	font-size: 1.4em;
+	height: 35px;
+	border-radius: 4px;
+	border: 1px solid #c8cccf;
+	color: #6a6f77;
+}
+
+.outputplace {
 	position: relative;
 	left: 20px;
 	height: auto;
 	width: 300px;
+	font-size: 1.4em;
 }
 
-.formtitle{
-	font-size:1.4em;
+.tubiao{
+	
 }
 
-#time1{
-	-web-kit-appearance:none;
-	-moz-appearance: none;
-	font-size:1.4em;
-	height:35px;
-	border-radius:4px;
-	border:1px solid #c8cccf;
-	color:#6a6f77;
-}
-
-#time2{
-	-web-kit-appearance:none;
-	-moz-appearance: none;
-	font-size:1.4em;
-	height:35px;
-	border-radius:4px;
-	border:1px solid #c8cccf;
-	color:#6a6f77;
-}
-
-.outputplace{
-	position: relative;
-	left: 20px;
-	height: auto;
-	width: 300px;
-	font-size:1.4em;
+#tubiao1 {
+	width: 50%;
+	height: 450px;
+	
 }
