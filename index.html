@@ -32,7 +32,7 @@
 					</div>
 					<ul class="list-inline">
 						<li id="C0"><a href="#/revise" title="修改">修改数据</a></li>
-						<li id="C1"><a href="#/statistics" title="统计">统计分析</a></li>
+						<li id="C1"><a id="S1" href="#/statistics" title="统计">统计分析</a></li>
 						<!--  <li>Item 3</li>
 			  		<li>Item 4</li>-->
 					</ul>
@@ -41,22 +41,509 @@
 		</nav>
 		<div class="Mainpage">
 			<div id="midmainpage0" class="content">
-				<div id="revise"></div>
-				<script>
-					$.get("./tql/data.html", function(result) {
-						$("#revise").html(result);
-					});
-				</script>
+				<div id="revise">
+					<div id="box1">
+						<div id="cen">
+							用户1
+							<input type="text" name="user1" id="user1" value="" placeholder="USER1">
+							&ensp;&ensp;&ensp;&ensp;
+							收入/支出
+							<select id="select1" onchange="Change_select();">
+								<option value="" selected="selected">请选择</option>
+								<option value="收入">收入</option>
+								<option value="支出">支出</option>
+							</select>
+							&ensp;&ensp;&ensp;&ensp;
+
+							用户2
+							<input type="text" name="user2" id="user2" value="" placeholder="USER2">
+							&ensp;&ensp;&ensp;&ensp;
+
+							金额
+							<input type="number" name="money1" id="money1" value="" placeholder="MONEY">
+							&ensp;&ensp;&ensp;&ensp;
+
+							时间
+							<select id="select2">、
+								<option value="" selected="selected">请选择</option>
+								<option value="2022">2022</option>
+							</select>
+							<select id="select3">
+								<option value="" selected="selected">请选择</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+							</select>
+							<select id="select4">
+								<option value="" selected="selected">请选择</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+								<option value="13">13</option>
+								<option value="14">14</option>
+								<option value="15">15</option>
+								<option value="16">16</option>
+								<option value="17">17</option>
+								<option value="18">18</option>
+								<option value="19">19</option>
+								<option value="20">20</option>
+								<option value="21">21</option>
+								<option value="22">22</option>
+								<option value="23">23</option>
+								<option value="24">24</option>
+								<option value="25">25</option>
+								<option value="26">26</option>
+								<option value="27">27</option>
+								<option value="28">28</option>
+								<option value="29">29</option>
+								<option value="30">30</option>
+								<option value="31">31</option>
+							</select>
+							&ensp;&ensp;&ensp;&ensp;
+
+							收支种类
+							<select id="select5"></select>
+							<option value="1"></option>
+							&ensp;&ensp;&ensp;&ensp;
+							<br /><br />
+
+							<input type="button" name="add" id="add" value="添加" />
+							&ensp;&ensp;&ensp;
+
+							<input type="button" name="find" id="find" value="查询" />
+							&ensp;&ensp;&ensp;
+
+							<input type="button" name="find" id="del" value="删除" />
+							<br /><br />
+
+							<div id="content"></div>
+							<script type="text/javascript">
+								var jsonData = [{
+										id: 1,
+										name1: "小华",
+										inout: "收入",
+										money: 300,
+										name2: "小明",
+										year: 2022,
+										month: 3,
+										day: 27,
+										type: "工资"
+									},
+									{
+										id: 2,
+										name2: "小华",
+										inout: "支出",
+										money: 60,
+										name1: "小红",
+										year: 2022,
+										month: 3,
+										day: 27,
+										type: "衣物"
+									},
+									{
+										id: 3,
+										name2: "小华",
+										inout: "支出",
+										money: 20,
+										name1: "小红",
+										year: 2022,
+										month: 3,
+										day: 27,
+										type: "食物"
+									},
+									{
+										id: 4,
+										name2: "小华",
+										inout: "收入",
+										money: 300,
+										name1: "小红",
+										year: 2022,
+										month: 3,
+										day: 27,
+										type: "工资"
+									},
+									{
+										id: 5,
+										name2: "小华",
+										inout: "支出",
+										money: 20,
+										name1: "小红",
+										year: 2022,
+										month: 3,
+										day: 27,
+										type: "日常用品"
+									},
+									{
+										id: 6,
+										name2: "小华",
+										inout: "收入",
+										money: 300,
+										name1: "小明",
+										year: 2022,
+										month: 3,
+										day: 28,
+										type: "工资"
+									},
+									{
+										id: 7,
+										name2: "小华",
+										inout: "支出",
+										money: 60,
+										name1: "小红",
+										year: 2022,
+										month: 3,
+										day: 28,
+										type: "衣物"
+									},
+									{
+										id: 8,
+										name2: "小华",
+										inout: "支出",
+										money: 20,
+										name1: "小红",
+										year: 2022,
+										month: 3,
+										day: 28,
+										type: "食物"
+									},
+									{
+										id: 9,
+										name2: "小华",
+										inout: "收入",
+										money: 300,
+										name1: "小红",
+										year: 2022,
+										month: 3,
+										day: 27,
+										type: "工资"
+									},
+									{
+										id: 10,
+										name2: "小华",
+										inout: "支出",
+										money: 20,
+										name1: "小明",
+										year: 2022,
+										month: 3,
+										day: 27,
+										type: "其他支出"
+									},
+									{
+										id: 11,
+										name2: "小华",
+										inout: "收入",
+										money: 300,
+										name1: "小明",
+										year: 2022,
+										month: 3,
+										day: 29,
+										type: "工资"
+									},
+									{
+										id: 12,
+										name2: "小华",
+										inout: "收入",
+										money: 60,
+										name1: "小红",
+										year: 2022,
+										month: 3,
+										day: 29,
+										type: "其他收入"
+									},
+									{
+										id: 13,
+										name2: "小华",
+										inout: "支出",
+										money: 20,
+										name1: "小红",
+										year: 2022,
+										month: 3,
+										day: 29,
+										type: "食物"
+									},
+									{
+										id: 14,
+										name2: "小华",
+										inout: "收入",
+										money: 300,
+										name1: "小红",
+										year: 2022,
+										month: 3,
+										day: 29,
+										type: "工资"
+									},
+									{
+										id: 15,
+										name2: "小华",
+										inout: "支出",
+										money: 20,
+										name1: "小红",
+										year: 2022,
+										month: 3,
+										day: 29,
+										type: "日常用品"
+									},
+									{
+										id: 16,
+										name2: "小华",
+										inout: "收入",
+										money: 300,
+										name1: "小明",
+										year: 2022,
+										month: 3,
+										day: 26,
+										type: "工资"
+									},
+									{
+										id: 17,
+										name2: "小华",
+										inout: "支出",
+										money: 60,
+										name1: "小华",
+										year: 2022,
+										month: 3,
+										day: 27,
+										type: "游戏"
+									},
+									{
+										id: 18,
+										name2: "小华",
+										inout: "支出",
+										money: 20,
+										name1: "小红",
+										year: 2022,
+										month: 3,
+										day: 27,
+										type: "食物"
+									},
+									{
+										id: 19,
+										name2: "小华",
+										inout: "收入",
+										money: 300,
+										name1: "小红",
+										year: 2022,
+										month: 3,
+										day: 27,
+										type: "工资"
+									},
+									{
+										id: 20,
+										name2: "小华",
+										inout: "支出",
+										money: 20,
+										name1: "小明",
+										year: 2022,
+										month: 3,
+										day: 27,
+										type: "日常用品"
+									}
+								]
+								initTable();
+
+								function initTable() {
+									var html = '<table  cellspacing="0" >';
+									html += '<tr>';
+									html += '<th id="ID">id</th>'
+									html += '<th>用户1</th>'
+									html += '<th>收入/支出</th>';
+									html += '<th>用户2</th>';
+									html += '<th>金额</th>';
+									html += '<th id="year">年</th>';
+									html += '<th id="month">月</th>';
+									html += '<th id="day">日</th>';
+									html += '<th>收支种类</th>';
+									html += '<th id="check"></th>';
+									html += '</tr>'
+									for (var j in jsonData) {
+										var obj = jsonData[j];
+										html += '<tr>'
+										html += '<td id="ID" class="entry">' + '<a href="#/dataentry" >' + obj.id + '</a>' + '</td>';
+										html += '<td class="entry">' + '<a href="#/dataentry" >' + obj.name1 + '</a>' + '</td>';
+										html += '<td class="entry">' + '<a href="#/dataentry" >' + obj.inout + '</a>' + '</td>';
+										html += '<td class="entry">' + '<a href="#/dataentry" >' + obj.name2 + '</a>' + '</td>';
+										html += '<td class="entry">' + '<a href="#/dataentry" >' + obj.money + '</a>' + '</td>';
+										html += '<td id="year" class="entry">' + '<a href="#/dataentry" >' + obj.year + '</a>' + '</td>';
+										html += '<td id="month" class="entry">' + '<a href="#/dataentry" >' + obj.month + '</a>' + '</td>';
+										html += '<td id="day" class="entry">' + '<a href="#/dataentry" >' + obj.day + '</a>' + '</td>';
+										html += '<td class="entry">' + '<a href="#/dataentry" >' + obj.type + '</a>' + '</td>';
+										html += '<td id="check"><input type="checkbox" /></td>';
+										html += '</tr>'
+									}
+									html += '</table>';
+									$('#content').append(html);
+								}
+							</script>
+						</div>
+					</div>
+				</div>
+
 			</div>
 			<div id="midmainpage1" class="content">
-				<div id="statistics"></div>
+				<div id="statistics">
+					<div id="inmidmain">
+						<div class="fangkuang">
+							<div class="inputplace">
+								<form role="form">
+									<div class="form-group">
+										<label for="name" class="formtitle">时间:1</label>
+										<select id="select2">
+											<option selected="selected" value="">请选择</option>
+											<option value="2022">2022</option>
+										</select>年
+										<select id="select3">
+											<option selected="selected" value="">请选择</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+											<option value="6">6</option>
+											<option value="7">7</option>
+											<option value="8">8</option>
+											<option value="9">9</option>
+											<option value="10">10</option>
+											<option value="11">11</option>
+											<option value="12">12</option>
+										</select>月
+										<select id="select4">
+											<option selected="selected" value="">请选择</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+											<option value="6">6</option>
+											<option value="7">7</option>
+											<option value="8">8</option>
+											<option value="9">9</option>
+											<option value="10">10</option>
+											<option value="11">11</option>
+											<option value="12">12</option>
+											<option value="13">13</option>
+											<option value="14">14</option>
+											<option value="15">15</option>
+											<option value="16">16</option>
+											<option value="17">17</option>
+											<option value="18">18</option>
+											<option value="19">19</option>
+											<option value="20">20</option>
+											<option value="21">21</option>
+											<option value="22">22</option>
+											<option value="23">23</option>
+											<option value="24">24</option>
+											<option value="25">25</option>
+											<option value="26">26</option>
+											<option value="27">27</option>
+											<option value="28">28</option>
+											<option value="29">29</option>
+											<option value="30">30</option>
+											<option value="31">31</option>
+										</select>日
+									</div>
+									<div class="form-group">
+										<label for="name" class="formtitle">时间:2</label>
+										<select id="select5">
+											<option selected="selected" value="">请选择</option>
+											<option value="2022">2022</option>
+										</select>年
+										<select id="select6">
+											<option selected="selected" value="">请选择</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+											<option value="6">6</option>
+											<option value="7">7</option>
+											<option value="8">8</option>
+											<option value="9">9</option>
+											<option value="10">10</option>
+											<option value="11">11</option>
+											<option value="12">12</option>
+										</select>月
+										<select id="select7">
+											<option selected="selected" value="">请选择</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+											<option value="6">6</option>
+											<option value="7">7</option>
+											<option value="8">8</option>
+											<option value="9">9</option>
+											<option value="10">10</option>
+											<option value="11">11</option>
+											<option value="12">12</option>
+											<option value="13">13</option>
+											<option value="14">14</option>
+											<option value="15">15</option>
+											<option value="16">16</option>
+											<option value="17">17</option>
+											<option value="18">18</option>
+											<option value="19">19</option>
+											<option value="20">20</option>
+											<option value="21">21</option>
+											<option value="22">22</option>
+											<option value="23">23</option>
+											<option value="24">24</option>
+											<option value="25">25</option>
+											<option value="26">26</option>
+											<option value="27">27</option>
+											<option value="28">28</option>
+											<option value="29">29</option>
+											<option value="30">30</option>
+											<option value="31">31</option>
+										</select>日
+									</div>
+									<button id="STRstatistics" type="submit" class="btn btn-default">开始比较</button>
+								</form>
+							</div>
+							<div class="outputplace">
+								<p> 时间1 比 时间2 </p>
+							</div>
+							<div class="tubiao">
+								<div id="tubiao1"></div>
+							</div>
+						</div>
+
+
+					</div>
+
+					<div id="tianchong"></div>
+				</div>
+			</div>
+			<div id="midmainpage2" class="content">
+				<div id="dataentry"></div>
 				<script>
-					$.get("./tql/txt2.html", function(result) {
-						$("#statistics").html(result);
+					$.get("./tql/dataandentry.html", function(result) {
+						$("#dataentry").html(result);
 					});
 				</script>
 			</div>
 		</div>
+		
+		</div>
 		<script src="js/hash.js"></script>
+
 	</body>
 </html>

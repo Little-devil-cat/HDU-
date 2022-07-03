@@ -332,15 +332,15 @@
 				for (var j in jsonData) {
 					var obj = jsonData[j];
 					html += '<tr>'
-					html += '<td id="ID">' + obj.id + '</td>';
-					html += '<td>' + obj.name1 + '</td>';
-					html += '<td>' + obj.inout + '</td>';
-					html += '<td>' + obj.name2 + '</td>';
-					html += '<td>' + obj.money + '</td>';
-					html += '<td id="year">' + obj.year + '</td>';
-					html += '<td id="month">' + obj.month + '</td>';
-					html += '<td id="day">' + obj.day + '</td>';
-					html += '<td>' + obj.type + '</td>';
+					html += '<td id="ID" class="entry">' + '<a href="#/dataentry" >'+obj.id+'</a>' + '</td>';
+					html += '<td class="entry">' + '<a href="#/dataentry" >'+obj.name1 +'</a>'+ '</td>';
+					html += '<td class="entry">' + '<a href="#/dataentry" >'+obj.inout +'</a>'+ '</td>';
+					html += '<td class="entry">' + '<a href="#/dataentry" >'+obj.name2 +'</a>'+ '</td>';
+					html += '<td class="entry">' + '<a href="#/dataentry" >'+obj.money +'</a>'+ '</td>';
+					html += '<td id="year" class="entry">' + '<a href="#/dataentry" >'+obj.year +'</a>'+ '</td>';
+					html += '<td id="month" class="entry">' + '<a href="#/dataentry" >'+obj.month +'</a>'+ '</td>';
+					html += '<td id="day" class="entry">' + '<a href="#/dataentry" >'+obj.day +'</a>'+ '</td>';
+					html += '<td class="entry">' + '<a href="#/dataentry" >'+obj.type +'</a>'+ '</td>';
 					html += '<td id="check"><input type="checkbox" /></td>';
 					html += '</tr>'
 				}

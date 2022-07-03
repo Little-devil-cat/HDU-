@@ -110,8 +110,7 @@
 	position: relative;
 	left: 20px;
 	height: auto;
-	width: 100%;
-
+	width: auto;
 	border: 2px solid darkblue;
 }
 
@@ -162,4 +161,18 @@
 	width: 50%;
 	height: 450px;
 	
+}
+
+.entry a{
+	display: block;
+	text-decoration: none;
+	color: black;
+	text-decoration: none;
+}
+
+.entry a:hover{
+	background: rgba(0,0,0,0.3);
+	/* 变换背景色 */
+	color: #fff;
+	/* 变换文字颜色 */
 }

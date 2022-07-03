@@ -1,3 +1,4 @@
+	
 $(document).ready(function () {
 	var DATALODING = echarts.init(document.getElementById('tubiao1'));
 	DATALODING.showLoading({
@@ -27,7 +28,7 @@ function showHistogramChart() {
 		legend: {                                   // 图例配置
 			padding: 5,                             // 图例内边距，单位px，默认上下左右内边距为5
 			itemGap: 10,                            // Legend各个item之间的间隔，横向布局时为水平间隔，纵向布局时为纵向间隔
-			data: ['时间1', '时间2', '差额']
+			data: ['时间1的金额', '时间2的金额', '差额']
 		},
 		tooltip: {                                  // 气泡提示配置
 			trigger: 'item',                        // 触发类型，默认数据触发，可选为：'axis'

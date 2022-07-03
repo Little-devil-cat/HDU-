@@ -77,7 +77,9 @@ Router.route('/revise', function() {
 Router.route('/statistics', function() {
 	display_page(1);
 })
-
+Router.route('/dataentry', function() {
+	display_page(2);
+})
 
 //初始化
 window.Router.init();
